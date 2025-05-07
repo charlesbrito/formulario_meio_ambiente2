@@ -1,0 +1,157 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Formulário ocupa 100% da largura disponível */
+  form {
+    background-color: #fff;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  .notificacao-defesa-inputText{
+    margin-top: 20px;
+  }
+  
+  /* Títulos de seções */
+  h2 {
+    margin-bottom: 10px;
+    color: #005a8d;
+  }
+  
+  /* Campos agrupados */
+  fieldset {
+    border: none;
+    margin-bottom: 30px;
+    
+    gap: 30px;
+  }
+  
+  fieldset label {
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  button {
+    background-color: #005a8d;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #00406a;
+  }
+  
+  /* Checkbox e radio */
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: auto;
+    margin-right: 5px;
+  }
+  
+  /* Parágrafos informativos */
+  fieldset p {
+    grid-column: span 2;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .subtitle-notificacao-defesa{
+    margin-top: 15px;
+  }
+
+  .embargo-demolicao{
+    margin-top: 20px;
+  }
+
+  .interdicao{
+    margin-top: 20px;
+  }
+
+  .apreensao{
+    margin-top: 20px;
+  }
+
+  .recuperacao{
+    margin-top: 20px;
+  }
+
+  .agente-sama2{
+    margin-top: 20px;
+  }
+
+  .testemunha1{
+    margin-top: 20px;
+  }
+
+  .testemunha2{
+    margin-top: 20px;
+  }
+
+  .vias{
+    margin-top: 20px;
+  }
+
+  .observacoes{
+    margin-top: 20px;
+  }
+  
+  .informacao-inicial{
+    margin-top: -20px;
+   
+  }
+
+  .identificacao{
+    margin-top: 20px;
+  }
+
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+    fieldset {
+      grid-template-columns: 1fr;
+    }
+  
+    form {
+      padding: 20px;
+    }
+  }
+  

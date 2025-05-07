@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="css">
+    <link rel="shortcut icon" href="logo_una-removebg-preview.png" type="image/x-icon">
+    <title>SECRETARIA DE AGRICULTURA 
+      E MEIO AMBIENTE
+      </title>
+
+</head>
+<body>
+    <form action="/enviar" method="POST">
+
+        <div class="form-container-identificacao">
+          <div class="informacao-inicial">
+            <label for="nome">N°</label>
+            <input type="text" id="nome" name="nome" pattern="[a-zA-Z0-9À-ÿ\s]+$" required />
+      
+            <label for="cpf_cnpj">Data:</label>
+            <input class="data" type="date" id="data1" name="data" required="required" />
+          </div>
+          <div class="identificacao">
+            <h2 class="titulo-identificacao">1. Identificação do Autuado</h2>
+            <fieldset>
+              <label for="nome">Nome/Razão Social:</label>
+              <input type="text" id="nome" name="nome" pattern="[a-zA-Z0-9À-ÿ\s]+$" required />
+      
+              <label for="cpf_cnpj">CPF/CNPJ:</label>
+              <input class="cpf_cnpj" type="text" id="cpfcnpj" name="cpf_cnpj" required="required" />
+      
+              <label for="telefone">Telefone:</label>
+              <input class="phone_com_ddd" type="tel" id="telefone" name="telefone" required />
+      
+              <label for="endereco">Endereço:</label>
+              <input type="text" id="endereco" name="endereco" pattern="^[a-zA-Z\s]+$" required />
+      
+              <label for="bairro">Bairro:</label>
+              <input type="text" id="bairro" name="bairro" required/>
+      
+              <label for="municipio">Município/UF:</label>
+              <input type="text" id="municipio" name="municipio" required />
+      
+              <label for="cep">CEP:</label>
+              <input class="cep" type="text" id="cep" name="cep" required />
+      
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" /></div>
+          
+          </fieldset>
+        </div>
+    
+        <div class="form-container-infracao">
+          <h2 class="titulo-infracao">2. Descrição da Infração</h2>
+          <fieldset>
+            <label for="data">Data:</label>
+            <input class="data" type="date" id="data" name="data" required />
+    
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required />
+    
+            <label for="local">Local:</label>
+            <input type="text" id="local" name="local" required />
+    
+            <label for="longitude">Coordenadas - LONG.:</label>
+            <input type="text" id="longitude" name="longitude" required />
+    
+            <label for="latitude">Coordenadas - LAT.:</label>
+            <input type="text" id="latitude" name="latitude" required/>
+    
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" rows="7" placeholder="Descreva a infração detalhadamente..." required ></textarea>
+    
+            <p><strong>Evidências:</strong></p>
+            <label><input type="checkbox" name="evidencias" value="fotos" /> Fotos</label>
+            <label><input type="checkbox" name="evidencias" value="amostras" /> Amostras</label>
+            <label><input type="checkbox" name="evidencias" value="videos" /> Vídeos</label>
+            <label><input type="checkbox" name="evidencias" value="testemunhas" /> Testemunhas</label>
+            <label><input type="checkbox" name="evidencias" value="outro" /> Outro</label>
+          </fieldset>
+          <h2 class="titulo-infracao">3. Fundamentação Legal</h2>
+          <fieldset>
+            <label for="lei">Lei nº 9.605/98:</label>
+            <input type="text" id="lei" name="lei" />
+    
+            <label for="decreto">Decreto nº 6.514/08:</label>
+            <input type="text" id="decreto" name="decreto" />
+          </fieldset>
+        </div>
+    
+        <div class="form-container-penalidades">
+          <h2 class="titulo-penalidades">4. Penalidades</h2>
+          <fieldset>
+            <label for="advertencia">Advertência</label>
+            <input type="text" id="prazo" name="prazo1" placeholder="Prazo" required />
+            <textarea id="medidas" name="medidas1" rows="5" placeholder="Descreva as medidas..."></textarea>
+    
+            <label for="multa">Multa</label>
+            <input class="valor-multa" type="text" id="multa" name="multa1" placeholder="Valor da multa" required />
+            <input type="text" id="base" name="base1" placeholder="Base legal" required />
+            
+            <div class="interdicao"><p><strong>Interdição:</strong></p>
+              <label><input type="radio" name="interdicao1" value="temporario1" /> Temporário</label>
+              <label><input type="radio" name="interdicao2" value="definitivo1" /> Definitivo</label>
+              <input type="text" name="base-interdicao1" id="base-interdicao" placeholder="Base legal">
+            </div>
+    
+            
+            
+            <div class="embargo-demolicao">
+              <label id="embargo-demolicao" for="embargo/demolicao">Embargo/Demolição</label>
+              <input type="text" id="base-embargo/demolicao" name="base-embargo/demolicao" placeholder="Base legal" required>
+            </div>
+    
+            
+            <div class="apreensao">
+              <label for="apreensao">Apreensão</label>
+              <textarea id="itens" name="itens" rows="5" placeholder="Itens"></textarea>
+            </div>
+            
+            <div class="recuperacao">
+              <label for="recuperacao">Recuperação</label>
+              <textarea id="medidas2" name="medidas2" rows="5" placeholder="Medidas"></textarea>
+            </div>
+            
+        </fieldset>
+    </div>
+    
+    <div class="form-container-notificacao-e-defesa">
+      <h2 class="titulo-notificacao-e-defesa">5. Notificação e defesa</h2>
+      <fieldset>
+        <p><strong>Notificação:</strong></p>
+        <label><input type="radio" name="notificacao" value="pessoal" /> Pessoal</label>
+        <label><input type="radio" name="notificacao" value="postal" /> Postal</label>
+        <label><input type="radio" name="notificacao" value="edital" /> Edital</label>
+
+      <div class="notificacao-defesa-inputText">
+        <label for="notificacao-e-defesa" >Data notificação</label>
+        <input class="data" type="date" id="data-notificacao" name="data-notificacao" required>
+        <h2 class="subtitle-notificacao-defesa">Defesa</h2>
+        <span>20 dias (Artigo 70, § 3º - Lei nº 9.605/98) e (Art. 113, § 1º - Decreto nº 6.514/08).
+          Apresentar à SAMA.
+          </span>
+      </div>
+
+       </fieldset>
+    </div>
+
+    <div class="form-equipe-de-ficalizacao">
+      <h2 class="titulo-equipe-de-fiscalizacao">6. Equipe de ficalização e testemunha</h2>
+      <fieldset>
+        <div class="agentes-sama1">
+          <label for="agente-sama">Agente Sama</label>
+          <input type="text" id="matricula-agente" name="matricula-agente" placeholder="matricula" required />
+          <label for="assinatura">Assinatura</label>
+          <input type="text" id="assinatura-agente" name="assinatura-agente" required  />
+        </div>
+
+        <div class="agente-sama2">
+          <label for="agente-sama">Agente Sama</label>
+          <input type="text" id="matricula-agente" name="matricula-agente6" placeholder="matricula" required />
+          <label for="assinatura">Assinatura</label>
+          <input type="text" id="assinatura-agente" name="assinatura-agente" required />
+          <label for="nome-fiscal-agente">Nome fiscal</label>
+          <input type="text" id="nome-fiscal-agente" name="nome-fiscal-agente" placeholder="nome fiscal" required />
+        </div>
+        <div class="testemunha1">
+          <label for="testemunha1">Testemunha 1</label>
+          <input type="text" id="testemunha1" name="testemunha1" placeholder="nome" required />
+        </div>
+        <div class="testemunha2">
+          <label for="testemunha2">Testemunha 2</label>
+          <input type="text" id="testemunha1" name="testemunha1" placeholder="nome"required />
+        </div>
+        <div class="vias">
+        <p><strong>Vias:</strong></p>
+        <label><input type="radio" name="vias" value="autuado" /> Autuado</label>
+        <label><input type="radio" name="vias" value="processo" /> Processo</label>
+        <label><input type="radio" name="vias" value="arquivo" /> Arquivo</label>
+        </div>
+        <div class="observacoes">
+          <label for="observacoes">Observações</label>
+          <textarea id="observacoes" name="observacoes" rows="8" ></textarea>
+        </div>
+      </fieldset>
+    </div>
+    
+    
+    
+    
+         
+    
+        <div style="text-align: center; margin-top: 30px;">
+          <button onclick="window.print()">Imprimir Formulário</button>
+        </div>
+    
+      </form>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+      <script src="jquery.mask.min.js"></script>
+      <script src="jquery.maskMoney.min.js"></script>
+     <script src="script.js"></script>
+
+</body>
+</html>
